@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-roiduter-dom";
+import { Routes, Route } from "react-router-dom";
 import Dashboard from "../Components/Dashboard";
 import Products from "../Components/Products";
 import Users from "../Components/Users";
@@ -19,11 +19,11 @@ function AppRoutes() {
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/products/:" element={<ProductDetails />} />
+        <Route path="/products/:id" element={<ProductDetails />} />
         <Route path="/users" element={<Users />} />
         <Route path="/user-details/:id" element={<UserDetails />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/cart-details" element={<CartDetails/>} />
+        <Route path="/cart/:id" element={<CartDetails/>} />
         <Route path="/posts" element={<Posts />} />
         <Route path="/post-details" element={<PostDetails />} />
         <Route path="/todo" element={<ToDo />} />

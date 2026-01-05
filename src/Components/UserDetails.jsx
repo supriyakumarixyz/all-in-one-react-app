@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function UserDetails() {
   const [user, setUser] = useState(null);
@@ -50,7 +51,9 @@ function UserDetails() {
                   {user.company.name},{user.company.title}
                   {user.company.address.address},{user.company.address.city}
                 </p>
-               
+               <Link to="/users" className="btn btn-outline-primary mt-3">
+                 back to user
+               </Link>
               </div>
             </div>
           </div>

@@ -17,7 +17,7 @@ function Products() {
           <div className="col-md-4 mb-4" key={product.id}>
             <div className="card h-100 shadow-sm product-card">
               <img
-                src={product.images}
+                src={product.thumbnail}
                 className="card-img-top p-3"
                 alt={product.title}
                 style={{ height: "200px", objectFit: "contain" }}
@@ -44,7 +44,7 @@ function Products() {
                 </div>
               </div>
             </div>
-          </div>
+          </div>  
         ))}
       </div>
     </div>
