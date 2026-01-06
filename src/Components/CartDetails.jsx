@@ -8,10 +8,11 @@ function CartDetails() {
 
   const {id} =useParams();
 
-  useEffect(()=>{
-   fetch(`https://dummyjson.com/carts/${id}`) 
-   .then((res)=>res.json()).then((res)=>setCardDetails(res));
-  },[id])
+ useEffect(()=>{
+  fetch(`https://dummyjson.com/carts/${id}`) 
+    .then(res => res.json())
+    .then(res => setCardDetails(res));
+}, [id])
 
   if(!cardDetails){
       return <p className="text-center mt-5">Loading...</p>;
@@ -40,8 +41,10 @@ function CartDetails() {
         <p>Price: ₹ {firstProduct?.price}</p>    
         <p>Quantity: {firstProduct?.quantity}</p>
 
-         <Link to="/cart" className="btn btn-outline-primary mt-3">
-              ⬅ Back to Products </Link>
+        <Link to="/user-cart" className="btn btn-secondary w-100 mt-3">
+     ⬅ Back to All Carts
+    </Link>
+
       </div>
     </div>
     </>

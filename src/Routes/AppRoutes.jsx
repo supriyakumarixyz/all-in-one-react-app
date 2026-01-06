@@ -22,9 +22,9 @@ function AppRoutes() {
         <Route path="/products/:id" element={<ProductDetails />} />
         <Route path="/users" element={<Users />} />
         <Route path="/user-details/:id" element={<UserDetails />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/cart/:id" element={<CartDetails/>} />
-        <Route path="/posts" element={<Posts />} />
+        <Route path="/user-cart" element={<Cart />} />
+        <Route path="/user-cart/:id" element={<CartDetails/>} />
+        <Route path="/user-posts/:id" element={<Posts />} />
         <Route path="/post-details" element={<PostDetails />} />
         <Route path="/todo" element={<ToDo />} />
         <Route path="/comments" element={<Comments/>} />

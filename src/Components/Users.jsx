@@ -12,8 +12,20 @@ function Users() {
   }, [])
 
   const redirectUserDetails = (userId) => {
-    navigate('/user-details/'+userId);
+    navigate('/user-details/' + userId);
   }
+  const redirectUserPosts = (userId) => {
+  navigate(`/user-posts/${userId}`);
+};
+
+
+  
+ 
+  const redirectUserCart = (userId) => {
+  navigate(`/user-cart/${userId}`);
+  }    
+  
+  
   return (
     <>
       <div className='container'>
@@ -44,7 +56,15 @@ function Users() {
                           <img style={{ height: "70px", width: "70px" }} src={user.image} />
                         </th>
                         <th>
-                          <button className='btn btn-dark' onClick={()=>{redirectUserDetails(user.id)}}>View Details</button>
+                          <button className='btn btn-dark' onClick={() => { redirectUserDetails(user.id) }}>
+                            View Details</button>
+                          <button className='btn btn-danger' onClick={() => { redirectUserPosts(user.id) }}>
+                           User Posts </button> 
+                            <button className='btn btn-info' onClick={()=>{redirectUserCart(user.id)}}>
+                            User Cart</button>
+
+
+
                         </th>
                       </tr>
                     )
@@ -60,4 +80,4 @@ function Users() {
   )
 }
 
-export default Users
+export default Users;

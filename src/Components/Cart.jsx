@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useParams } from 'react-router-dom';
 
 function Cart() {
 
   const [carts, setCarts] = useState([]);
 
-  useEffect(() => {
-    fetch("https://dummyjson.com/carts")
-      .then((res) => res.json())
-      .then((res) => setCarts(res.carts));
-  }, []);
+  const { id } = useParams(); // user id from URL
+
+
+ useEffect(() => {
+  fetch(`https://dummyjson.com/carts`)
+    .then((res) => res.json())
+    .then((res) => setCarts(res.carts || []));
+}, []);
 
   return (
     <div className="container mt-4">
@@ -30,12 +33,7 @@ function Cart() {
                 <p>Total Products: {cart.totalProducts}</p>
                 <p>Total Price: ₹ {cart.total}</p>
 
-                <Link
-                  to={`/cart/${cart.id}`}
-                  className="btn btn-primary w-100"
-                >
-                  View Cart Details
-                </Link>
+                <Link to={`/user-cart/${cart.id}`}>View Cart Details</Link>
 
               </div>
             </div>
