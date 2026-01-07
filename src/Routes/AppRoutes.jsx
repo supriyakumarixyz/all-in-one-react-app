@@ -7,11 +7,14 @@ import Cart from "../Components/Cart";
 import CartDetails from "../Components/CartDetails";
 import ProductDetails from "../Components/ProductDetails";
 import Posts from "../Components/Posts";
-import PostDetails from "../Components/PostDetails";
 import ToDo from "../Components/ToDo";
 import Comments from "../Components/Comments";
 import Quotes from "../Components/Quotes";
 import Recipes from "../Components/Recipes";
+import AllPosts from "../Components/AllPosts";
+import AllCarts from "../Components/AllCarts";
+import ViewReceipe from "../Components/ViewReceipe";
+
 
 function AppRoutes() {
   return (
@@ -23,13 +26,16 @@ function AppRoutes() {
         <Route path="/users" element={<Users />} />
         <Route path="/user-details/:id" element={<UserDetails />} />
         <Route path="/user-cart" element={<Cart />} />
+        <Route path="/carts" element={<AllCarts />} />
         <Route path="/user-cart/:id" element={<CartDetails/>} />
         <Route path="/user-posts/:id" element={<Posts />} />
-        <Route path="/post-details" element={<PostDetails />} />
+        <Route path="/posts" element={<AllPosts />} />
         <Route path="/todo" element={<ToDo />} />
-        <Route path="/comments" element={<Comments/>} />
+        <Route path="/comments/:id" element={<Comments/>} />
         <Route path="/quotes" element={<Quotes />} />
         <Route path="/recipes" element={<Recipes />} />
+        <Route path="/view-recipe/:id" element={<ViewReceipe/>} />
+
       </Routes>
     </>
   )

@@ -29,7 +29,7 @@ function Dashboard() {
               <div className="card-body">
                 <h5 className="card-title">Cart</h5>
                 <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <Link to="/cart" className="btn btn-danger">Cart List</Link>
+                <Link to="/carts" className="btn btn-danger">Cart List</Link>
               </div>
             </div>
           </div>

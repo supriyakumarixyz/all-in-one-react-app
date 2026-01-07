@@ -19,7 +19,7 @@ function Header() {
         </li><li className="nav-item">
           <Link className="nav-link active" aria-current="page" to="/users">Users</Link>
         </li><li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/cart">Cart</Link>
+          <Link className="nav-link active" aria-current="page" to="/carts">AllCarts</Link>
         </li><li className="nav-item">
           <Link className="nav-link active" aria-current="page" to="/posts">Posts</Link>
         </li><li className="nav-item">
